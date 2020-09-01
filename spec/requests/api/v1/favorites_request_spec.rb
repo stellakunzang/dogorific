@@ -60,4 +60,15 @@ describe 'Favorites API' do
     expect(json[:data].length).to eq(3)
   end
 
+  it 'can delete a favorite' do
+
+    delete "/api/v1/favorites/#{@favorite2.id}"
+
+    get '/api/v1/favorites'
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json[:data].length).to eq(1)
+  end
+
 end
