@@ -70,7 +70,7 @@ describe 'Breeds API' do
       ])
   end
 
-  it 'sends a list of all breeds' do
+  it 'returns a list of all breeds' do
     get '/api/v1/breeds'
 
     json = JSON.parse(response.body, symbolize_names: true)
@@ -84,5 +84,17 @@ describe 'Breeds API' do
       expect(breed[:attributes]).to have_key(:description)
       expect(breed[:attributes]).to have_key(:images)
     end
+  end
+
+  it 'returns single breed with id' do
+    get "/api/v1/breeds/#{@akita.id}"
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json[:data][:id]).to eq("#{@akita.id}")
+    expect(json[:data][:attributes][:name]).to eq(@akita.name)
+    expect(json[:data][:attributes][:country]).to eq(@akita.country)
+    expect(json[:data][:attributes][:description]).to eq(@akita.description)
+    expect(json[:data][:attributes][:images]).to eq(@akita.images)
   end
 end
