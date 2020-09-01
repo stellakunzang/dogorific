@@ -15,6 +15,11 @@ class Api::V1::FavoritesController < ApplicationController
     end
   end
 
+  def destroy
+    Favorite.delete(params[:id])
+    render json: ConfirmationSerializer.new(successfully_deleted_message).info
+  end
+
   private
 
   def successfully_created_message
