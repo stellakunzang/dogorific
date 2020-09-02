@@ -51,7 +51,7 @@ describe 'Favorites API' do
                           "breed": "#{@beagle.id}"
                         }
 
-    post '/api/v1/favorites/add', params: new_favorite_body
+    post '/api/v1/favorites/add', params: new_favorite_body.to_json, headers: { "CONTENT_TYPE" => "application/json" }
 
     get '/api/v1/favorites'
 
