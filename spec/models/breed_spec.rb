@@ -7,4 +7,8 @@ describe Breed, type: :model do
     it { should validate_presence_of :description }
     it { should validate_presence_of :images }
   end
+
+  describe 'relationships' do
+    it { should have_many :favorites }
+  end
 end
