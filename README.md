@@ -85,4 +85,6 @@ Test coverage is currently at 100%
 
 If there were more time to continue working, I would ask follow-up questions about the desired response for the `DELETE` and `POST` requests, write sad-path tests, and add kind error messages for failed requests.
 
-I was not able to hook the backend application up to the frontend provided, and I would love to see that in action. I am new to yarn/npm and docker, and couldn't quite figure out how to get everyone to play nicely. An extension of this is that I did not hook up the backend application to Postman as intended to capture responses for the README. In the future I would want the data in the sample responses to come from the actual API and not from the test data.
+I was not able to hook the backend application up to the frontend provided, and I would love to see that in action. I am new to yarn/npm and docker, and couldn't quite figure out how to get everyone to play nicely. 
+
+An extension of this is that I did not hook up the backend application to Postman as intended to confirm expected behavior and capture responses for the README. In the future I would want the data in the sample responses to come from the actual API and not from the test data.
