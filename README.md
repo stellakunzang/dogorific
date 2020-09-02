@@ -167,3 +167,9 @@ This application uses RSpec for testing, along with Shoulda-Matchers and SimpleC
 Test coverage is currently at 100%
 
 ![SimpleCov](/public/test_coverage.png)
+
+## Future Iterations 
+
+If there were more time to continue working, I would ask follow-up questions about the desired response for the `DELETE` and `POST` requests, write sad-path tests, and add kind error messages for failed requests. 
+
+I was not able to hook the backend application up to the frontend provided, and I would love to see that in action. I am new to yarn/npm and docker, and couldn't quite figure out how to get everyone to play nicely. 
